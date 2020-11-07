@@ -1,30 +1,22 @@
+#Import SpaCy
 import spacy
 from spacy import displacy
 from collections import Counter
 nlp = spacy.load("en_core_web_sm")
 
+#Instantiate a dictionary
 d={}
-#Dictionary to map "EN<xxx>": <entity>
-#(example:  {EN001: "Europe"}
+
+#List of NE's we want:
+named_entity_labels = ["PERSON", "ORG", "PRODUCT"]
 
 FILE = "train_en.txt"
-with open(FILE, "r", encoding='Latin-1 Supplement') as f:
-	i = 0
-	for line in f:
-		print(i, end=' ')
-		print(line)
-		i+=1
-	print(i)
-
-#File of source text sentences
-'''FILE = "train_en.txt"
-with open(FILE, "r") as f:
-	i = 1
-	for line in f:
-		doc=nlp(line)
-		for X in doc.ents:
-			d["NE{}".format(i)] = X.text
-			i+=1
-	f.close()
-for entry in d:
-	print(entry, d[entry])'''
+with open(FILE, "r", encoding='utf-8') as f:
+    i = 1
+    for line in f:
+        doc=nlp(line)
+        for X in doc.ents:
+            if X.label_ in named_entity_labels:
+                d[X.text] = "NE{}".format(i)
+                i+=1
+    f.close()
