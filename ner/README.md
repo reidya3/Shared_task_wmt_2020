@@ -11,7 +11,9 @@
 
 4) The `dict values` also hold:
 	1) The line number that the **NE** appeared in.
-	2) The start and end indexes of the **NE** within the sentence (for example, if "Sean" was at the start of a sentence, its position would be (0, 4)) (we put 4 not 3 because it isn't inclusive)
+	2) The start and end indexes of the **NE** within the sentence 
+
+	(for example, if "Sean" was at the start of a sentence, its position would be (0, 4)) (we put 4 not 3 because it isn't inclusive)
 
 5) We want to now open a new file to write to, I named it `train_en_swapped_ne.txt`.
 
