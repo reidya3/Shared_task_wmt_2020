@@ -6,15 +6,15 @@
 
 ### Contents
 
-1) `mask` function. 
-Function parameters:
-	mask(input_tsv, output_tsv, entities)
+1) `mask` function. <br>
+Function parameters:<br>
+	mask(input_tsv, output_tsv, entities)<br>
 
-`input_tsv` is the .tsv containing the source text you want to mask.
-`output_tsv` is the name of the file you would like to write to.
-`entities` is a list of the labels you would like to mask.
+`input_tsv` is the .tsv containing the source text you want to mask.<br>
+`output_tsv` is the name of the file you would like to write to.<br>
+`entities` is a list of the labels you would like to mask.<br>
 
-**NOTE:** This function also produces a **mapping.json** file containing the `dictionary`.
+**NOTE:** This function also produces a **mapping.json** file containing the `dictionary`.<br>
 
 2) `value_creator` function.
 
