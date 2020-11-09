@@ -3,5 +3,5 @@ ___
 ## Notebook:
 The notebook folder has a functional NER
 
-##python NER:
+## python NER:
 Contains NER scripts
