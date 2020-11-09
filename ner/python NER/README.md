@@ -1,10 +1,11 @@
 # This folder is for our Named Entity Finder python script.
 
+---
 ## named_entity_recogniser.py
-___
+
 
 ### Contents
----
+
 1) `mask` function. 
 Function parameters:
 	mask(input_tsv, output_tsv, entities)
@@ -22,7 +23,7 @@ This function is called by `mask`. It creates the correct **NEXXX** value for a 
 ---
 
 ## run_ner.py
-___
+
 
 This is an example usage of `named_entity_recogniser.py`
 
