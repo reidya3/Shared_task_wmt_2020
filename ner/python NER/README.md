@@ -3,7 +3,7 @@
 ## named_entity_recogniser.py
 ___
 
-# Contents
+### Contents
 ---
 1) `mask` function. 
 Function parameters:
