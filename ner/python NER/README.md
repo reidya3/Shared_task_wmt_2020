@@ -4,6 +4,8 @@
 ## named_entity_recogniser.py
 
 
+# Found mistake: If NEXXX value is longer than NE value, it doesn't work correctly.
+
 ### Contents
 
 1) `mask` function. <br>

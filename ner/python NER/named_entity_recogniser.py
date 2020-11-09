@@ -30,11 +30,11 @@ def mask(input_csv, output_csv, entities):
 				entity_count+=1
 
 	df.to_csv(path_or_buf=output_csv, sep='\t')
-	with open('mapping.json', 'w') as fp:
+	with open('output/mapping.json', 'w') as fp:
 		json.dump(d, fp)
 	return(d)
 
 def value_creator(text, entity_no, line_no, start, end):
 	length = len(text)
-	val = str(entity_no) + ((length -(2+len(str(entity_no)))) * "*")
+	val = ((length -(2+len(str(entity_no)))) * "0") + str(entity_no)
 	return("NE{}".format(val),"{}".format(line_no),("{}".format(start), "{}".format(end)))
