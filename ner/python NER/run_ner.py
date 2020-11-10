@@ -1,4 +1,4 @@
-from named_entity_recogniser import *
+from named_entity_recogniser import mask
 
 
 #This is an example of how to use the mask function
