@@ -3,9 +3,6 @@
 ---
 ## named_entity_recogniser.py
 
-
-# Found mistake: If NEXXX value is longer than NE value, it doesn't work correctly.
-
 ### Contents
 
 1) `mask` function. <br>
@@ -18,10 +15,6 @@ Function parameters:<br>
 
 **NOTE:** This function also produces a **mapping.json** file containing the `dictionary`.<br>
 
-2) `value_creator` function.
-
-This function is called by `mask`. It creates the correct **NEXXX** value for a a given **key** (named entity)
-
 ---
 
 ## run_ner.py
@@ -33,4 +26,4 @@ This is an example usage of `named_entity_recogniser.py`
 
 ## Jupyter notebook
 
-**NOTE:** For some reason, the same script fails on jupyter notebook. Not sure why.
+A visual example usage of `named_entity_recogniser.py`
