@@ -23,7 +23,3 @@ Function parameters:<br>
 This is an example usage of `named_entity_recogniser.py`
 
 ---
-
-## Jupyter notebook
-
-A visual example usage of `named_entity_recogniser.py`

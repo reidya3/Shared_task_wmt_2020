@@ -2,7 +2,7 @@
 import spacy
 from spacy import displacy
 from collections import Counter
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("de_core_news_sm")
 
 #Import pandas
 import pandas as pd
@@ -16,12 +16,13 @@ def mask(input_csv, output_csv, entities):
 
 	entity_count = 0
 	for index, row in df.iterrows():
-		line = row.original
+		line = row.translation
 		doc = nlp(line)
 		adjust = 0
 		for X in doc.ents:
 			if X.label_ in entities:
-				d[X.text] = "NE{}".format(entity_count)
+				if X.text not in d:
+					d[X.text] = "NE{}".format(entity_count)
 
 				start, end = X.start_char-adjust, X.end_char-adjust
 
@@ -31,10 +32,10 @@ def mask(input_csv, output_csv, entities):
 
 				entity_count+=1
 
-		df.at[index,"original"]=line
+		df.at[index,"translation"]=line
 
 			
 	df.to_csv(path_or_buf=output_csv, sep='\t')
-	with open('output/mapping.json', 'w') as fp:
+	with open('output/dev_mapping.json', 'w') as fp:
 		json.dump(d, fp)
 	return(d)
