@@ -9,7 +9,7 @@
 Function parameters:<br>
 	mask(input_tsv, output_tsv, entities)<br>
 
-`input_tsv` is the .tsv containing the source text you want to mask.<br>
+`input_tsv` is the .tsv containing the text you want to mask.<br>
 `output_tsv` is the name of the file you would like to write to.<br>
 `entities` is a list of the labels you would like to mask.<br>
 
@@ -20,6 +20,8 @@ Function parameters:<br>
 ## run_ner.py
 
 
-This is an example usage of `named_entity_recogniser.py`
+This is an example usage of `named_entity_recogniser.py`<br>
+
+Make sure you select the right **input** and **output**.
 
 ---
