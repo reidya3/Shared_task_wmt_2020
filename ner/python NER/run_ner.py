@@ -1,9 +1,8 @@
 from named_entity_recogniser import mask
 
-
 #This is an example of how to use the mask function
 
-IN = "output/en_dev_masked.tsv"
+IN = "input/dev.ende.df.short.tsv"
 OUT = "output/dev_masked.tsv"
 entities = ["PER", "PERSON", "ORG", "PRODUCT", "WORK_OF_ART", "LOC"]
 
