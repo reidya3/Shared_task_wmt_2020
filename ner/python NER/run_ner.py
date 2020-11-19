@@ -1,9 +1,10 @@
-from named_entity_recogniser import mask
+from named_entity_recogniser2 import mask
 
 #This is an example of how to use the mask function
 
-IN = "input/dev.ende.df.short.tsv"
-OUT = "output/dev_masked.tsv"
-entities = ["PER", "PERSON", "ORG", "PRODUCT", "WORK_OF_ART", "LOC"]
+IN = "input/train.ende.df.short.tsv"
+OUT = "output/train.ende.masked.tsv"
+JSON = "output/train.ende.mapping.json"
+entities = ["PER", "PERSON", "ORG", "ORGANIZATION", "PRODUCT", "WORK_OF_ART", "LOC"]
 
-d = mask(IN, OUT, entities)
+mask(IN, OUT, JSON, entities)

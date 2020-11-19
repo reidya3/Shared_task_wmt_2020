@@ -5,9 +5,9 @@
 
 ### Contents
 
-1) `mask` function. <br>
+`mask` function. <br>
 Function parameters:<br>
-	mask(input_tsv, output_tsv, entities)<br>
+	**mask(input_tsv, output_tsv, entities)**<br>
 
 `input_tsv` is the .tsv containing the text you want to mask.<br>
 `output_tsv` is the name of the file you would like to write to.<br>

@@ -8,6 +8,9 @@ target_nlp = spacy.load("de_core_news_sm")
 #Import pandas
 import pandas as pd
 
+#Import Levenshtein
+import Levenshtein as l
+
 #Import json
 import json
 
@@ -39,6 +42,8 @@ def mask(input_csv, output_csv, entities):
 				line2 = "".join([line2[:start],d[Y.text],line2[end:]])
 				target_adjust=len(Y.text)-len(d[Y.text])
 				entity_count+=1
+
+#Replace row with masked version.
 		df.at[index,"original"]=line1
 		df.at[index, "translation"]=line2
 			
