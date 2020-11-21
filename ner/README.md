@@ -1,7 +1,8 @@
 # This Folder is for Named Entity Recognition
 ___ 
-## Notebook:
-The notebook folder has a functional NER
 
 ## python NER:
-Contains NER scripts
+Contains named_entity_recogniser.py<br>
+		named_entity_recogniser2.py<br>
+		run_ner.py<br>
+		input & output <br>
