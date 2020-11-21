@@ -2,7 +2,7 @@
 import spacy
 from spacy import displacy
 from collections import Counter
-source_nlp = spacy.load("en_core_web_sm")
+source_nlp = spacy.load("ro_core_news_sm")
 
 #Import pandas
 import pandas as pd
@@ -38,9 +38,11 @@ def mask(input_csv, output_csv, output_json, entities):
                 entity = "".join(["(?b)" + "(", X.text, ")", "{0<=s<=5,0<=d<=5}"])
                 re = regex.search(entity, line2)
                 if re:
+                    d[str(re)] = "NE{}".format(entity_count)
                     t_start, t_end = re.span()[0]-target_adjust, re.span()[1]-target_adjust
-                    line2 = "".join([line2[0:re.span()[0]], d[X.text], line2[re.span()[1]:]])
-                    target_adjust=(re.span()[1]-re.span()[0])-len(d[X.text])
+                    line2 = "".join([line2[0:re.span()[0]], d[str(re)], line2[re.span()[1]:]])
+                    target_adjust=(re.span()[1]-re.span()[0])-len(d[str(re)])
+                    entity_count+=1
 
 
 #Replace row with masked version:
