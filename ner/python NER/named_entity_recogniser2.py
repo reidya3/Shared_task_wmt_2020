@@ -2,7 +2,6 @@
 import spacy
 from spacy import displacy
 from collections import Counter
-source_nlp = spacy.load("ro_core_news_sm")
 
 #Import pandas
 import pandas as pd
